@@ -1,5 +1,6 @@
 // TODO: add the appropriate head files here
-
+#include <stdio.h>
+#include <sys/types.h>
 /************************************************************\
  * get_arguments - returns the command line arguments not
  *                 including this file in an array with the
