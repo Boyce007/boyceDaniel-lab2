@@ -17,7 +17,7 @@ char* ipc_create(int size){
     /* pointer to shared memory obect */
     char* ptr;
 
-    fd = shm_open("Start Time", O_CREAT | O_RDWR, 0666);
+    fd = shm_open("lab2", O_CREAT | O_RDWR, 0666);
 
 
     // TODO: configure the size of the shared memory object 

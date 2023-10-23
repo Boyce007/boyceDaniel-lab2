@@ -1,6 +1,7 @@
 // TODO: add the appropriate head files here
 #include <stdio.h>
 #include <sys/types.h>
+#include "ipc.c"
 /************************************************************\
  * get_arguments - returns the command line arguments not
  *                 including this file in an array with the
@@ -42,6 +43,7 @@ int main(int argc, char** argv)
     
     // TODO: call ipc_create to create shared memory region to which parent
     //       child have access.
+    ipc_create(pid);
 
     /* fork a child process */
     pid = fork();
@@ -52,6 +54,7 @@ int main(int argc, char** argv)
     }
     else if (pid == 0) { /*child process */
         // TODO: use gettimeofday to log the start time
+        gettimeofday(&start_time,NULL);
 
         // TODO: write the time to the IPC
         
